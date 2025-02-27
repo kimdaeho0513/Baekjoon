@@ -11,22 +11,6 @@ class Main {
             numbers[i] = Integer.parseInt(st.nextToken());
             i++;
         }
-        int minX;
-        int minY;
-        if(numbers[0]<numbers[2]-numbers[0]){
-            minX = numbers[0];
-        } else {
-            minX = numbers[2]-numbers[0];
-        }
-        if(numbers[1]<numbers[3]-numbers[1]){
-            minY = numbers[1];
-        } else {
-            minY = numbers[3]-numbers[1];
-        }
-        if(minX>minY){
-            System.out.println(minY);
-        } else {
-            System.out.println(minX);
-        }
+        System.out.println(Math.min(Math.min(numbers[0], numbers[2]-numbers[0]),Math.min(numbers[1], numbers[3]-numbers[1])));
     }
 }
